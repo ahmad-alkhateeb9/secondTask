@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Stage 2') {
             steps {
-               sh 'docker build -t ahmadsecond .'
+               sh 'docker build -t ahmadsecondpush .'
                 sh 'ls'
             }
         }

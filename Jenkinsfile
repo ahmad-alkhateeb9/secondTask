@@ -24,8 +24,7 @@ pipeline {
             steps {
                 script{
                     docker.withRegistry ('','dockerhub'){
-                        dockerImage.push();
-                        dockerImage.push('latest');
+                        sh 'docker push ahmadsecondpush'
                     }
                 }
             }

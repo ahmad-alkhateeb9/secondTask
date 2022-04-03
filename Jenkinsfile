@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Stage 2') {
             steps {
-               sh 'docker build -t ahmad .'
+               sh 'docker build -t ahmadSecond .'
             }
             steps{
                 sh 'ls ./images'

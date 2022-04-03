@@ -20,6 +20,16 @@ pipeline {
                 sh 'ls'
             }
         }
+        stage('Stage push') {
+            steps {
+                script{
+                    docker.withRigistry ('','dockerhub'){
+                        dockerImage.push();
+                        dockerImage.push('latest');
+                    }
+                }
+            }
+        }
         
         
     }
